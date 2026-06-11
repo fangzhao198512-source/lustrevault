@@ -1,0 +1,16 @@
+﻿{
+  "name": "lustrevault",
+  "version": "1.0.0",
+  "description": "LustreVault — 探索你的欲望边界",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo \"在浏览器中打开 index.html 即可预览\"",
+    "deploy": "npx vercel --prod"
+  },
+  "keywords": ["adult-shop", "ecommerce"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "stripe": "^22.2.0"
+  }
+}

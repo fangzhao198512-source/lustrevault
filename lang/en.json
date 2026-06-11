@@ -1,0 +1,194 @@
+﻿{
+  "brand": "LustreVault",
+  "nav": {
+    "home": "Home",
+    "products": "All Products",
+    "categories": "Categories",
+    "checkout": "Checkout"
+  },
+  "hero": {
+    "badge": "🔒 Discreet Shipping · Worldwide Delivery",
+    "title": "Explore Your{span}Desires{/span}",
+    "subtitle": "Curated premium adult products from around the world, designed for your pleasure.<br>Every item is carefully selected — from materials to design — for the best experience.",
+    "cta": "Shop Now",
+    "learnMore": "Learn More"
+  },
+  "categories": {
+    "title": "Categories",
+    "subtitle": "Find what suits you",
+    "vibrator": { "name": "Vibrators", "desc": "Classic & smart picks" },
+    "dildo": { "name": "Dildos", "desc": "Realistic sensation" },
+    "couple": { "name": "Couple Toys", "desc": "Shared pleasure" },
+    "bdsm": { "name": "BDSM & Bondage", "desc": "Explore more" },
+    "lubricant": { "name": "Lubricants", "desc": "Smooth experience" }
+  },
+  "products": {
+    "title": "All Products",
+    "subtitle": "Best sellers",
+    "addToCart": "Add to Cart",
+    "specs": "Specifications",
+    "rating": "reviews",
+    "originalPrice": "was",
+    "data": [
+      {
+        "id": 1,
+        "name": "Smart Temperature Vibrator",
+        "category": "vibrator",
+        "desc": "Food-grade silicone, 10 vibration modes, smart temperature control, quiet motor, USB magnetic charging, 2-hour battery. Waterproof for bath use.",
+        "specs": ["Food-grade silicone | 22cm | 3.5cm dia | 2hr battery", "USB magnetic charging"],
+        "badge": "Hot"
+      },
+      {
+        "id": 2,
+        "name": "Ultra Realistic Massager Pro",
+        "category": "dildo",
+        "desc": "Bio-mimetic design with skin-like texture. Bendable inner skeleton. Suitable for all experience levels — a must-have starter.",
+        "specs": ["Liquid silicone | 20cm | 4cm dia", "Bendable skeleton"],
+        "badge": "New"
+      },
+      {
+        "id": 3,
+        "name": "Long Distance Couple Egg",
+        "category": "couple",
+        "desc": "APP remote control, perfect for long-distance couples. Ultra quiet, multiple modes.",
+        "specs": ["Bluetooth remote | 10 modes", "Ultra quiet | 4hr battery | IPX7"],
+        "badge": "Hot"
+      },
+      {
+        "id": 4,
+        "name": "Luxury Leather Blindfold Set",
+        "category": "bdsm",
+        "desc": "Premium genuine leather, soft lining, adjustable strap. Comes with silk restraints. Explore your senses.",
+        "specs": ["Genuine leather | Velvet lining", "Adjustable | Silk restraints included"],
+        "badge": "Starter"
+      },
+      {
+        "id": 5,
+        "name": "Water-based Lubricant 200ml",
+        "category": "lubricant",
+        "desc": "Gentle formula, no irritation, odorless & transparent. Compatible with condoms and toys. Easy to wash off.",
+        "specs": ["200ml | Water-based | No irritation", "Condom compatible | Easy wash"],
+        "badge": "Essential"
+      },
+      {
+        "id": 6,
+        "name": "G-Spot Vibrator",
+        "category": "vibrator",
+        "desc": "Unique curved tip for precise G-spot stimulation. 20 vibration frequencies to suit every need.",
+        "specs": ["Food-grade silicone | Curved tip", "20 modes | 3hr battery | IPX7"],
+        "badge": "Hot"
+      },
+      {
+        "id": 7,
+        "name": "Double-Ended Strap-On",
+        "category": "dildo",
+        "desc": "Couple dual-use design, wearable. Simultaneous dual stimulation for enhanced shared experience.",
+        "specs": ["Liquid silicone | Wearable", "Dual stimulation | Adjustable straps"],
+        "badge": "Hot"
+      },
+      {
+        "id": 8,
+        "name": "Feather Tease Kit",
+        "category": "bdsm",
+        "desc": "Soft feather touch, from gentle strokes to teasing. Perfect for foreplay and sensory exploration. Includes storage pouch.",
+        "specs": ["Natural ostrich feathers | Ergonomic handle", "Storage pouch included | Beginner friendly"],
+        "badge": "Starter"
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Choose Us",
+    "subtitle": "Buy with confidence, enjoy with peace of mind",
+    "privacy": { "title": "Absolute Privacy", "desc": "Neutral packaging with no sensitive labels. The shipping label shows only your delivery info — your privacy is fully protected." },
+    "safety": { "title": "Safe Materials", "desc": "All products use food-grade silicone and ABS eco-friendly materials, certified by SGS and international safety standards." },
+    "support": { "title": "24/7 Support", "desc": "Round-the-clock customer service. Any product questions or usage inquiries — we are here for you anytime." },
+    "returns": { "title": "30-Day Returns", "desc": "Not satisfied within 30 days? Return or exchange. Your satisfaction is our only commitment." }
+  },
+  "footer": {
+    "about": "Premium adult products curated for your pleasure.",
+    "quickLinks": "Quick Links",
+    "links": ["About Us", "Privacy Policy", "Shipping Info", "Returns Policy"],
+    "service": "Customer Service",
+    "serviceLinks": ["FAQ", "Contact Us", "Size Guide", "Usage Guide"],
+    "contact": "Contact Us",
+    "contactEmail": "📧 support@lustrevault.com",
+    "contactChat": "💬 Live Chat: 24/7",
+    "contactPrivacy": "🔒 Privacy: privacy@lustrevault.com",
+    "copyright": "© 2026 LustreVault. All rights reserved. | 18+ Only"
+  },
+  "cart": {
+    "title": "🛒 Cart",
+    "empty": "Your cart is empty",
+    "emptyHint": "Go find something you like 👀",
+    "total": "Total",
+    "checkout": "Checkout →",
+    "remove": "Remove",
+    "added": "✅ Added to cart: {name}",
+    "emptyCart": "Cart is empty"
+  },
+  "checkout": {
+    "title": "🛒 Checkout",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "San",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Zhang",
+    "email": "Email",
+    "emailPlaceholder": "example@email.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+86 138 0000 0000",
+    "country": "Country",
+    "address": "Address",
+    "addressPlaceholder": "Street address",
+    "city": "City",
+    "cityPlaceholder": "Shenzhen",
+    "zip": "ZIP Code",
+    "zipPlaceholder": "518000",
+    "note": "Note",
+    "notePlaceholder": "Any special requests (e.g. delivery time)",
+    "payment": "Payment Method",
+    "payBtn": "💳 Pay Now",
+    "secure": "🔒 Secured by SSL encryption",
+    "required": "⚠️ Please fill in all required fields",
+    "processing": "⏳ Processing...",
+    "error": "⚠️ Network error, please try again",
+    "orderSummary": "📋 Order Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "privacyNote": "🔒 Privacy protected: neutral packaging, no sensitive info on labels",
+    "countries": ["China (中国)", "United States (美国)", "Japan (日本)", "South Korea (韩国)", "United Kingdom (英国)", "Australia (澳大利亚)", "Canada (加拿大)", "Other countries"],
+    "paymentMethods": {
+      "stripe": "💳 Credit Card (Stripe)",
+      "paypal": "💰 PayPal",
+      "wechat": "💚 WeChat Pay",
+      "alipay": "💙 Alipay"
+    }
+  },
+  "product": {
+    "breadcrumb": "Product Details",
+    "backToHome": "Back to Home",
+    "notFound": "Product not found",
+    "selectSpec": "Select Specification",
+    "buyNow": "Buy Now"
+  },
+  "success": {
+    "title": "Payment Successful!",
+    "message": "Thank you for your purchase! We will process your order soon.<br>A confirmation email will be sent to your inbox.",
+    "orderId": "Order ID",
+    "paymentMethod": "Payment",
+    "paymentValue": "Credit Card (Stripe)",
+    "shipping": "Delivery",
+    "shippingValue": "3-7 business days",
+    "privacyNote": "🔒 Your privacy is fully protected — discreet packaging guaranteed",
+    "continue": "Continue Shopping",
+    "demoOrder": "🎉 Order placed successfully!\n\nThank you for your purchase, {name}!\nConfirmation email will be sent to: {email}\n\n🔒 Your privacy is fully protected."
+  },
+  "lang": {
+    "zh": "中文",
+    "en": "EN",
+    "ja": "日本語"
+  },
+  "common": {
+    "goToCheckout": "Checkout"
+  }
+}

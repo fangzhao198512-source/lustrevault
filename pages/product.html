@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="product.breadcrumb">产品详情 — LustreVault</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="logo" data-i18n="brand">LustreVault</a>
+    <nav>
+      <ul>
+        <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
+        <li><a href="../index.html#products" data-i18n="nav.products">所有产品</a></li>
+        <li><a href="../index.html#categories" data-i18n="nav.categories">分类</a></li>
+        <li><a href="checkout.html" data-i18n="nav.checkout">结算</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <!-- 语言切换 -->
+      <div class="lang-switcher">
+        <select class="lang-select" onchange="window.__i18n.setLang(this.value)" style="padding:6px 10px;border-radius:8px;border:1px solid var(--gray-300);background:var(--white);font-size:0.85rem;cursor:pointer;">
+          <option value="zh">中文</option>
+          <option value="en">EN</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+      <button class="btn btn-sm btn-dark" onclick="window.location.href='checkout.html'" data-i18n="common.goToCheckout">去结算</button>
+      <button class="cart-icon" onclick="toggleCart()">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="../index.html" data-i18n="nav.home">首页</a>
+  <span>›</span>
+  <a href="../index.html#products" data-i18n="nav.products">所有产品</a>
+  <span>›</span>
+  <span id="breadcrumbName"></span>
+</div>
+
+<section class="product-detail" id="productDetail">
+  <!-- 由 JS 动态渲染 -->
+</section>
+
+<!-- 购物车 -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3 data-i18n="cart.title">🛒 购物车</h3>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty"><div class="cart-empty-icon">🛒</div><p data-i18n="cart.empty">购物车还是空的</p></div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total"><span data-i18n="cart.total">合计</span><span id="cartTotalPrice">¥0.00</span></div>
+    <a href="checkout.html" class="btn btn-primary cart-checkout-btn" data-i18n="cart.checkout">去结算 →</a>
+  </div>
+</div>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/i18n-loader.js"></script>
+<script>
+function renderProductDetail() {
+  const p = JSON.parse(sessionStorage.getItem("view_product") || "null");
+  const container = document.getElementById("productDetail");
+  const breadcrumbName = document.getElementById("breadcrumbName");
+  const i18n = window.__i18n;
+  const t = (key, vars) => i18n?.t(key, vars) ?? key;
+
+  if (!p) {
+    container.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:80px 0;">
+      <h2>${t("product.notFound")}</h2>
+      <p style="color:#666;margin-top:10px;"><a href="../index.html">${t("product.backToHome")}</a></p>
+    </div>`;
+    return;
+  }
+
+  if (breadcrumbName) breadcrumbName.textContent = p.name;
+  document.title = p.name + " — LustreVault";
+
+  const stars = "★".repeat(Math.floor(p.rating)) + (p.rating % 1 >= 0.5 ? "½" : "");
+  const originalHtml = p.originalPrice ? `<span class="price-original">${t("products.originalPrice")} ¥${p.originalPrice}</span>` : "";
+
+  container.innerHTML = `
+    <div class="product-detail-image">${p.icon}</div>
+    <div class="product-detail-info">
+      <h1>${p.name}</h1>
+      <div class="product-rating">${stars} ${p.rating} (${p.reviews} ${t("products.rating")})</div>
+      <div class="product-detail-price">¥${p.price} ${originalHtml}</div>
+      <p class="product-detail-desc">${p.desc}</p>
+      <div class="product-detail-select">
+        <label>${t("product.selectSpec")}</label>
+        <select id="specSelect">
+          ${p.specs.map(s => `<option value="${s}">${s}</option>`).join("")}
+        </select>
+      </div>
+      <div class="product-detail-actions">
+        <button class="btn btn-primary" onclick="addToCart(${p.id}, '${p.name.replace(/'/g, "\\'")}', ${p.price}, '${p.icon}')">${t("products.addToCart")}</button>
+        <a href="checkout.html" class="btn btn-dark">${t("product.buyNow")}</a>
+      </div>
+    </div>
+  `;
+}
+
+// 语言切换时重新渲染
+document.addEventListener("langchange", renderProductDetail);
+
+// 等待 i18n 加载后渲染
+const checkI18n = setInterval(() => {
+  if (window.__i18n && Object.keys(window.__i18n._data).length > 0) {
+    clearInterval(checkI18n);
+    renderProductDetail();
+  }
+}, 100);
+</script>
+</body>
+</html>

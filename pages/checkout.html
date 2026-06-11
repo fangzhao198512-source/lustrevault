@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="checkout.title">结算 — LustreVault</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="logo" data-i18n="brand">LustreVault</a>
+    <nav>
+      <ul>
+        <li><a href="../index.html" data-i18n="nav.home">首页</a></li>
+        <li><a href="../index.html#products" data-i18n="nav.products">所有产品</a></li>
+        <li><a href="../index.html#categories" data-i18n="nav.categories">分类</a></li>
+        <li><a href="checkout.html" data-i18n="nav.checkout">结算</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switcher">
+        <select class="lang-select" onchange="window.__i18n.setLang(this.value)" style="padding:6px 10px;border-radius:8px;border:1px solid var(--gray-300);background:var(--white);font-size:0.85rem;cursor:pointer;">
+          <option value="zh">中文</option>
+          <option value="en">EN</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+      <button class="cart-icon" onclick="toggleCart()">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="checkout-page">
+  <h1 data-i18n="checkout.title">🛒 结算</h1>
+
+  <!-- 左侧：填写信息 -->
+  <div>
+    <div class="form-row">
+      <div class="form-group">
+        <label data-i18n="checkout.firstName">名字 *</label>
+        <input type="text" id="firstName" data-i18n-placeholder="checkout.firstNamePlaceholder" placeholder="三">
+      </div>
+      <div class="form-group">
+        <label data-i18n="checkout.lastName">姓氏 *</label>
+        <input type="text" id="lastName" data-i18n-placeholder="checkout.lastNamePlaceholder" placeholder="张">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label data-i18n="checkout.email">邮箱 *</label>
+      <input type="email" id="email" data-i18n-placeholder="checkout.emailPlaceholder" placeholder="example@email.com">
+    </div>
+
+    <div class="form-group">
+      <label data-i18n="checkout.phone">手机号 *</label>
+      <input type="tel" id="phone" data-i18n-placeholder="checkout.phonePlaceholder" placeholder="+86 138 0000 0000">
+    </div>
+
+    <div class="form-group">
+      <label data-i18n="checkout.country">国家/地区 *</label>
+      <select id="country">
+        <option data-i18n-value="checkout.countries.0">中国 (China)</option>
+        <option data-i18n-value="checkout.countries.1">美国 (United States)</option>
+        <option data-i18n-value="checkout.countries.2">日本 (Japan)</option>
+        <option data-i18n-value="checkout.countries.3">韩国 (South Korea)</option>
+        <option data-i18n-value="checkout.countries.4">英国 (United Kingdom)</option>
+        <option data-i18n-value="checkout.countries.5">澳大利亚 (Australia)</option>
+        <option data-i18n-value="checkout.countries.6">加拿大 (Canada)</option>
+        <option data-i18n-value="checkout.countries.7">其他国家/地区</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label data-i18n="checkout.address">地址 *</label>
+      <input type="text" id="address" data-i18n-placeholder="checkout.addressPlaceholder" placeholder="街道地址">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label data-i18n="checkout.city">城市 *</label>
+        <input type="text" id="city" data-i18n-placeholder="checkout.cityPlaceholder" placeholder="深圳">
+      </div>
+      <div class="form-group">
+        <label data-i18n="checkout.zip">邮编 *</label>
+        <input type="text" id="zip" data-i18n-placeholder="checkout.zipPlaceholder" placeholder="518000">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label data-i18n="checkout.note">备注</label>
+      <textarea rows="3" id="note" data-i18n-placeholder="checkout.notePlaceholder" placeholder="如有特殊要求请备注（如配送时间等）"></textarea>
+    </div>
+
+    <div class="form-group" style="margin-top:25px;">
+      <label style="font-size:1rem;" data-i18n="checkout.payment">支付方式</label>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;">
+        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
+          <input type="radio" name="payment" value="stripe" checked> <span data-i18n="checkout.paymentMethods.stripe">💳 信用卡 (Stripe)</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
+          <input type="radio" name="payment" value="paypal"> <span data-i18n="checkout.paymentMethods.paypal">💰 PayPal</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
+          <input type="radio" name="payment" value="wechat"> <span data-i18n="checkout.paymentMethods.wechat">💚 微信支付</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
+          <input type="radio" name="payment" value="alipay"> <span data-i18n="checkout.paymentMethods.alipay">💙 支付宝</span>
+        </label>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" style="width:100%;margin-top:20px;" id="checkoutBtn" onclick="handleCheckout()">
+      <span data-i18n="checkout.payBtn">💳 去支付</span>
+    </button>
+    <p style="font-size:0.8rem;color:#999;margin-top:10px;text-align:center;" data-i18n="checkout.secure">🔒 支付信息通过 SSL 加密传输，安全可靠</p>
+  </div>
+
+  <!-- 右侧：订单摘要 -->
+  <div class="order-summary" id="orderSummary">
+    <h3 data-i18n="checkout.orderSummary">📋 订单摘要</h3>
+    <div id="orderItems"></div>
+    <div class="order-total-line">
+      <span data-i18n="checkout.subtotal">小计</span>
+      <span id="subtotal">¥0.00</span>
+    </div>
+    <div class="order-total-line">
+      <span data-i18n="checkout.shipping">运费</span>
+      <span>¥0.00</span>
+    </div>
+    <div class="order-total-line big">
+      <span data-i18n="checkout.total">合计</span>
+      <span id="total">¥0.00</span>
+    </div>
+    <div style="margin-top:15px;padding:12px;background:#fff3cd;border-radius:8px;font-size:0.85rem;">
+      <span data-i18n="checkout.privacyNote">🔒 隐私保护：中性包装发货，快递单无敏感信息</span>
+    </div>
+    <div class="payment-icons" style="margin-top:15px;">
+      💳 💰 💚 💙
+    </div>
+  </div>
+</section>
+
+<!-- 购物车侧栏 -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3 data-i18n="cart.title">🛒 购物车</h3>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty"><div class="cart-empty-icon">🛒</div><p data-i18n="cart.empty">购物车还是空的</p></div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total"><span data-i18n="cart.total">合计</span><span id="cartTotalPrice">¥0.00</span></div>
+    <a href="checkout.html" class="btn btn-primary cart-checkout-btn" data-i18n="cart.checkout">去结算 →</a>
+  </div>
+</div>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/i18n-loader.js"></script>
+<script>
+function renderOrderSummary() {
+  const cart = JSON.parse(localStorage.getItem("lustrevault_cart")) || [];
+  const container = document.getElementById("orderItems");
+  const subtotalEl = document.getElementById("subtotal");
+  const totalEl = document.getElementById("total");
+  const btn = document.getElementById("checkoutBtn");
+  const i18n = window.__i18n;
+  const t = (key) => i18n?.t(key) ?? key;
+
+  if (cart.length === 0) {
+    container.innerHTML = `<p style="color:#666;text-align:center;padding:20px 0;">${t("cart.empty")}</p>`;
+    if (subtotalEl) subtotalEl.textContent = "¥0.00";
+    if (totalEl) totalEl.textContent = "¥0.00";
+    if (btn) btn.disabled = true;
+    return;
+  }
+  if (btn) btn.disabled = false;
+
+  container.innerHTML = cart.map(item => `
+    <div class="order-item">
+      <div class="order-item-image">${item.icon || "📦"}</div>
+      <div class="order-item-info">
+        <div style="font-weight:600;">${item.name} × ${item.qty}</div>
+        <div class="order-item-price">¥${(item.price * item.qty).toFixed(2)}</div>
+      </div>
+    </div>
+  `).join("");
+
+  const subtotal = cart.reduce((s, item) => s + item.price * item.qty, 0);
+  if (subtotalEl) subtotalEl.textContent = `¥${subtotal.toFixed(2)}`;
+  if (totalEl) totalEl.textContent = `¥${subtotal.toFixed(2)}`;
+}
+
+async function handleCheckout() {
+  const firstName = document.getElementById("firstName")?.value.trim();
+  const lastName = document.getElementById("lastName")?.value.trim();
+  const email = document.getElementById("email")?.value.trim();
+  const phone = document.getElementById("phone")?.value.trim();
+  const address = document.getElementById("address")?.value.trim();
+  const city = document.getElementById("city")?.value.trim();
+  const zip = document.getElementById("zip")?.value.trim();
+  const i18n = window.__i18n;
+  const t = (key, vars) => i18n?.t(key, vars) ?? key;
+
+  if (!firstName || !lastName || !email || !phone || !address || !city || !zip) {
+    showToast(t("checkout.required", "⚠️ 请填写所有必填字段"));
+    return;
+  }
+
+  const cart = JSON.parse(localStorage.getItem("lustrevault_cart")) || [];
+  if (cart.length === 0) {
+    showToast(t("cart.emptyCart"));
+    return;
+  }
+
+  const payment = document.querySelector('input[name="payment"]:checked');
+  const paymentMethod = payment ? payment.value : "stripe";
+
+  const btn = document.getElementById("checkoutBtn");
+  btn.disabled = true;
+  btn.innerHTML = `<span>${t("checkout.processing")}</span>`;
+
+  try {
+    if (paymentMethod === "stripe") {
+      const res = await fetch("/api/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          items: cart,
+          customer: { email, name: `${firstName} ${lastName}` }
+        }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        showToast(t("checkout.error"));
+        btn.disabled = false;
+        btn.innerHTML = `<span>${t("checkout.payBtn")}</span>`;
+      }
+    } else {
+      showToast("🎉 " + t("success.title"));
+      localStorage.removeItem("lustrevault_cart");
+      cart.length = 0;
+      updateCartUI();
+      renderOrderSummary();
+      setTimeout(() => {
+        alert(t("success.demoOrder", { name: `${firstName} ${lastName}`, email }));
+        window.location.href = "../index.html";
+      }, 500);
+    }
+  } catch (err) {
+    showToast(t("checkout.error"));
+    btn.disabled = false;
+    btn.innerHTML = `<span>${t("checkout.payBtn")}</span>`;
+  }
+}
+
+// 监听语言切换
+document.addEventListener("langchange", function() {
+  renderOrderSummary();
+  // 重新应用 i18n 到表单标签等
+  window.__i18n?.apply();
+  // 更新国家下拉
+  const countrySelect = document.getElementById("country");
+  if (countrySelect && window.__i18n) {
+    for (let i = 0; i < countrySelect.options.length; i++) {
+      const key = `checkout.countries.${i}`;
+      countrySelect.options[i].textContent = window.__i18n.t(key);
+    }
+  }
+  // 更新支付方式标签
+  document.querySelectorAll('input[name="payment"]').forEach(input => {
+    const span = input.nextElementSibling;
+    if (span) {
+      const key = span.getAttribute("data-i18n");
+      if (key) span.textContent = window.__i18n?.t(key) || span.textContent;
+    }
+  });
+});
+
+// 等待 i18n 加载后渲染
+const checkI18n = setInterval(() => {
+  if (window.__i18n && Object.keys(window.__i18n._data).length > 0) {
+    clearInterval(checkI18n);
+    renderOrderSummary();
+  }
+}, 100);
+</script>
+</body>
+</html>
