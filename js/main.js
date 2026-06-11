@@ -1,4 +1,4 @@
-﻿/* ===== 产品数据 ===== */
+/* ===== 产品数据 ===== */
 // 产品核心数据（价格、图标等不依赖语言的属性）
 const productBase = [
   { id: 1, price: 268, originalPrice: 328, icon: "🔮", badgeType: "sale", rating: 4.8, reviews: 326 },

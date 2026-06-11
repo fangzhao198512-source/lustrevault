@@ -1,4 +1,4 @@
-﻿/* ===== 购物车系统 ===== */
+/* ===== 购物车系统 ===== */
 let cart = JSON.parse(localStorage.getItem("lustrevault_cart")) || [];
 
 function saveCart() {
