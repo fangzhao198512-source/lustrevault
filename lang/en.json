@@ -1,4 +1,4 @@
-﻿{
+﻿
   "brand": "LustreVault",
   "nav": {
     "home": "Home",
@@ -29,7 +29,72 @@
     "specs": "Specifications",
     "rating": "reviews",
     "originalPrice": "was",
-    "data": []
+        "data": [
+      {
+        "id": 1,
+        "name": "Smart Temperature Vibrator",
+        "category": "vibrator",
+        "desc": "Food-grade silicone, 10 vibration modes, smart temperature control, quiet motor, USB magnetic charging, 2-hour battery. Waterproof for bath use.",
+        "specs": ["Food-grade silicone | 22cm | 3.5cm dia | 2hr battery", "USB magnetic charging"],
+        "badge": "Hot"
+      },
+      {
+        "id": 2,
+        "name": "Ultra Realistic Massager Pro",
+        "category": "dildo",
+        "desc": "Bio-mimetic design with skin-like texture. Bendable inner skeleton. Suitable for all experience levels.",
+        "specs": ["Liquid silicone | 20cm | 4cm dia", "Bendable skeleton"],
+        "badge": "New"
+      },
+      {
+        "id": 3,
+        "name": "Long Distance Couple Egg",
+        "category": "couple",
+        "desc": "APP remote control, perfect for long-distance couples. Ultra quiet, multiple modes.",
+        "specs": ["Bluetooth remote | 10 modes", "Ultra quiet | 4hr battery | IPX7"],
+        "badge": "Hot"
+      },
+      {
+        "id": 4,
+        "name": "Luxury Leather Blindfold Set",
+        "category": "bdsm",
+        "desc": "Premium genuine leather, soft lining, adjustable strap. Comes with silk restraints. Explore your senses.",
+        "specs": ["Genuine leather | Velvet lining", "Adjustable | Silk restraints included"],
+        "badge": "Starter"
+      },
+      {
+        "id": 5,
+        "name": "Water-based Lubricant 200ml",
+        "category": "lubricant",
+        "desc": "Gentle formula, no irritation, odorless & transparent. Compatible with condoms and toys. Easy to wash off.",
+        "specs": ["200ml | Water-based | No irritation", "Condom compatible | Easy wash"],
+        "badge": "Essential"
+      },
+      {
+        "id": 6,
+        "name": "G-Spot Vibrator",
+        "category": "vibrator",
+        "desc": "Unique curved tip for precise G-spot stimulation. 20 vibration frequencies to suit every need.",
+        "specs": ["Food-grade silicone | Curved tip", "20 modes | 3hr battery | IPX7"],
+        "badge": "Hot"
+      },
+      {
+        "id": 7,
+        "name": "Double-Ended Strap-On",
+        "category": "dildo",
+        "desc": "Couple dual-use design, wearable. Simultaneous dual stimulation for enhanced shared experience.",
+        "specs": ["Liquid silicone | Wearable", "Dual stimulation | Adjustable straps"],
+        "badge": "Hot"
+      },
+      {
+        "id": 8,
+        "name": "Feather Tease Kit",
+        "category": "bdsm",
+        "desc": "Soft feather touch, from gentle strokes to teasing. Perfect for foreplay and sensory exploration.",
+        "specs": ["Natural ostrich feathers | Ergonomic handle", "Storage pouch included | Beginner friendly"],
+        "badge": "Starter"
+      }
+    ]
   },
   "features": {
     "title": "Why Choose Us",
