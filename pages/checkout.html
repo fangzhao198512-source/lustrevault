@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="checkout.title">缁撶畻 鈥?LustreVault</title>
+  <title data-i18n="checkout.title">缂佹挾鐣?閳?LustreVault</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -13,22 +13,22 @@
     <a href="../index.html" class="logo" data-i18n="brand">LustreVault</a>
     <nav>
       <ul>
-        <li><a href="../index.html" data-i18n="nav.home">棣栭〉</a></li>
-        <li><a href="../index.html#products" data-i18n="nav.products">鎵€鏈変骇鍝?/a></li>
-        <li><a href="../index.html#categories" data-i18n="nav.categories">鍒嗙被</a></li>
-        <li><a href="checkout.html" data-i18n="nav.checkout">缁撶畻</a></li>
+        <li><a href="../index.html" data-i18n="nav.home">妫ｆ牠銆?/a></li>
+        <li><a href="../index.html#products" data-i18n="nav.products">閹碘偓閺堝楠囬崫?/a></li>
+        <li><a href="../index.html#categories" data-i18n="nav.categories">閸掑棛琚?/a></li>
+        <li><a href="checkout.html" data-i18n="nav.checkout">缂佹挾鐣?/a></li>
       </ul>
     </nav>
     <div class="header-actions">
       <div class="lang-switcher">
         <select class="lang-select" onchange="window.__i18n.setLang(this.value)" style="padding:6px 10px;border-radius:8px;border:1px solid var(--gray-300);background:var(--white);font-size:0.85rem;cursor:pointer;">
-          <option value="zh">涓枃</option>
+          <option value="zh">娑擃厽鏋?/option>
           <option value="en">EN</option>
-          <option value="ja">鏃ユ湰瑾?/option>
+          <option value="ja">閺冦儲婀扮懢?/option>
         </select>
       </div>
       <button class="cart-icon" onclick="toggleCart()">
-        馃洅
+        棣冩磪
         <span class="cart-count" id="cartCount">0</span>
       </button>
     </div>
@@ -36,130 +36,130 @@
 </header>
 
 <section class="checkout-page">
-  <h1 data-i18n="checkout.title">馃洅 缁撶畻</h1>
+  <h1 data-i18n="checkout.title">棣冩磪 缂佹挾鐣?/h1>
 
-  <!-- 宸︿晶锛氬～鍐欎俊鎭?-->
+  <!-- 瀹革缚鏅堕敍姘綖閸愭瑤淇婇幁?-->
   <div>
     <div class="form-row">
       <div class="form-group">
-        <label data-i18n="checkout.firstName">鍚嶅瓧 *</label>
-        <input type="text" id="firstName" data-i18n-placeholder="checkout.firstNamePlaceholder" placeholder="涓?>
+        <label data-i18n="checkout.firstName">閸氬秴鐡?*</label>
+        <input type="text" id="firstName" data-i18n-placeholder="checkout.firstNamePlaceholder" placeholder="娑?>
       </div>
       <div class="form-group">
-        <label data-i18n="checkout.lastName">濮撴皬 *</label>
-        <input type="text" id="lastName" data-i18n-placeholder="checkout.lastNamePlaceholder" placeholder="寮?>
+        <label data-i18n="checkout.lastName">婵挻鐨?*</label>
+        <input type="text" id="lastName" data-i18n-placeholder="checkout.lastNamePlaceholder" placeholder="瀵?>
       </div>
     </div>
 
     <div class="form-group">
-      <label data-i18n="checkout.email">閭 *</label>
+      <label data-i18n="checkout.email">闁喚顔?*</label>
       <input type="email" id="email" data-i18n-placeholder="checkout.emailPlaceholder" placeholder="example@email.com">
     </div>
 
     <div class="form-group">
-      <label data-i18n="checkout.phone">鎵嬫満鍙?*</label>
+      <label data-i18n="checkout.phone">閹靛婧€閸?*</label>
       <input type="tel" id="phone" data-i18n-placeholder="checkout.phonePlaceholder" placeholder="+86 138 0000 0000">
     </div>
 
     <div class="form-group">
-      <label data-i18n="checkout.country">鍥藉/鍦板尯 *</label>
+      <label data-i18n="checkout.country">閸ヨ棄顔?閸︽澘灏?*</label>
       <select id="country">
-        <option data-i18n-value="checkout.countries.0">涓浗 (China)</option>
-        <option data-i18n-value="checkout.countries.1">缇庡浗 (United States)</option>
-        <option data-i18n-value="checkout.countries.2">鏃ユ湰 (Japan)</option>
-        <option data-i18n-value="checkout.countries.3">闊╁浗 (South Korea)</option>
-        <option data-i18n-value="checkout.countries.4">鑻卞浗 (United Kingdom)</option>
-        <option data-i18n-value="checkout.countries.5">婢冲ぇ鍒╀簹 (Australia)</option>
-        <option data-i18n-value="checkout.countries.6">鍔犳嬁澶?(Canada)</option>
-        <option data-i18n-value="checkout.countries.7">鍏朵粬鍥藉/鍦板尯</option>
+        <option data-i18n-value="checkout.countries.0">娑擃厼娴?(China)</option>
+        <option data-i18n-value="checkout.countries.1">缂囧骸娴?(United States)</option>
+        <option data-i18n-value="checkout.countries.2">閺冦儲婀?(Japan)</option>
+        <option data-i18n-value="checkout.countries.3">闂娾晛娴?(South Korea)</option>
+        <option data-i18n-value="checkout.countries.4">閼诲崬娴?(United Kingdom)</option>
+        <option data-i18n-value="checkout.countries.5">濠㈠啿銇囬崚鈺€绨?(Australia)</option>
+        <option data-i18n-value="checkout.countries.6">閸旂姵瀣佹径?(Canada)</option>
+        <option data-i18n-value="checkout.countries.7">閸忔湹绮崶钘夘啀/閸︽澘灏?/option>
       </select>
     </div>
 
     <div class="form-group">
-      <label data-i18n="checkout.address">鍦板潃 *</label>
-      <input type="text" id="address" data-i18n-placeholder="checkout.addressPlaceholder" placeholder="琛楅亾鍦板潃">
+      <label data-i18n="checkout.address">閸︽澘娼?*</label>
+      <input type="text" id="address" data-i18n-placeholder="checkout.addressPlaceholder" placeholder="鐞涙浜鹃崷鏉挎絻">
     </div>
 
     <div class="form-row">
       <div class="form-group">
-        <label data-i18n="checkout.city">鍩庡競 *</label>
-        <input type="text" id="city" data-i18n-placeholder="checkout.cityPlaceholder" placeholder="娣卞湷">
+        <label data-i18n="checkout.city">閸╁骸绔?*</label>
+        <input type="text" id="city" data-i18n-placeholder="checkout.cityPlaceholder" placeholder="濞ｅ崬婀?>
       </div>
       <div class="form-group">
-        <label data-i18n="checkout.zip">閭紪 *</label>
+        <label data-i18n="checkout.zip">闁喚绱?*</label>
         <input type="text" id="zip" data-i18n-placeholder="checkout.zipPlaceholder" placeholder="518000">
       </div>
     </div>
 
     <div class="form-group">
-      <label data-i18n="checkout.note">澶囨敞</label>
-      <textarea rows="3" id="note" data-i18n-placeholder="checkout.notePlaceholder" placeholder="濡傛湁鐗规畩瑕佹眰璇峰娉紙濡傞厤閫佹椂闂寸瓑锛?></textarea>
+      <label data-i18n="checkout.note">婢跺洦鏁?/label>
+      <textarea rows="3" id="note" data-i18n-placeholder="checkout.notePlaceholder" placeholder="婵″倹婀侀悧瑙勭暕鐟曚焦鐪扮拠宄邦槵濞夘煉绱欐俊鍌炲帳闁焦妞傞梻瀵哥搼閿?></textarea>
     </div>
 
     <div class="form-group" style="margin-top:25px;">
-      <label style="font-size:1rem;" data-i18n="checkout.payment">鏀粯鏂瑰紡</label>
+      <label style="font-size:1rem;" data-i18n="checkout.payment">閺€顖欑帛閺傜懓绱?/label>
       <div style="display:flex;flex-wrap:wrap;gap:15px;margin-top:10px;">
         <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:12px 18px;border:2px solid var(--gray-200);border-radius:12px;transition:all 0.3s;" id="paypalLabel">
           <input type="radio" name="payment" value="paypal" checked>
           <span style="font-size:1.5rem;font-weight:700;color:#003087;">PayPal</span>
-          <span style="font-size:0.8rem;color:#666;">馃實 鍏ㄧ悆鏀舵</span>
+          <span style="font-size:0.8rem;color:#666;">棣冨 閸忋劎鎮嗛弨鑸殿儥</span>
         </label>
         <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:12px 18px;border:2px solid var(--gray-200);border-radius:12px;transition:all 0.3s;" id="stripeLabel">
           <input type="radio" name="payment" value="stripe">
-          <span style="font-size:1.1rem;">馃挸 Stripe</span>
-          <span style="font-size:0.8rem;color:#666;">淇＄敤鍗?/span>
+          <span style="font-size:1.1rem;">棣冩尭 Stripe</span>
+          <span style="font-size:0.8rem;color:#666;">娣囷紕鏁ら崡?/span>
         </label>
       </div>
-      <p style="font-size:0.8rem;color:#999;margin-top:8px;">馃挕 鎺ㄨ崘浣跨敤 PayPal 鈥?鍥藉唴鍙敞鍐岋紝鏀寔鍏ㄧ悆浠樻</p>
+      <p style="font-size:0.8rem;color:#999;margin-top:8px;">棣冩寱 閹恒劏宕樻担璺ㄦ暏 PayPal 閳?閸ヨ棄鍞撮崣顖涙暈閸愬矉绱濋弨顖涘瘮閸忋劎鎮嗘禒妯活儥</p>
     </div>
 
     <button class="btn btn-primary" style="width:100%;margin-top:20px;font-size:1.1rem;padding:16px;" id="checkoutBtn" onclick="handleCheckout()">
-      馃挵 浣跨敤 PayPal 鏀粯
+      棣冩尩 娴ｈ法鏁?PayPal 閺€顖欑帛
     </button>
-    <p style="font-size:0.8rem;color:#999;margin-top:10px;text-align:center;" data-i18n="checkout.secure">馃敀 鏀粯淇℃伅閫氳繃 SSL 鍔犲瘑浼犺緭锛屽畨鍏ㄥ彲闈?/p>
+    <p style="font-size:0.8rem;color:#999;margin-top:10px;text-align:center;" data-i18n="checkout.secure">棣冩晙 閺€顖欑帛娣団剝浼呴柅姘崇箖 SSL 閸旂姴鐦戞导鐘虹翻閿涘苯鐣ㄩ崗銊ュ讲闂?/p>
   </div>
 
-  <!-- 鍙充晶锛氳鍗曟憳瑕?-->
+  <!-- 閸欏厖鏅堕敍姘愁吂閸楁洘鎲崇憰?-->
   <div class="order-summary" id="orderSummary">
-    <h3 data-i18n="checkout.orderSummary">馃搵 璁㈠崟鎽樿</h3>
+    <h3 data-i18n="checkout.orderSummary">棣冩惖 鐠併垹宕熼幗妯款洣</h3>
     <div id="orderItems"></div>
     <div class="order-total-line">
-      <span data-i18n="checkout.subtotal">灏忚</span>
-      <span id="subtotal">楼0.00</span>
+      <span data-i18n="checkout.subtotal">鐏忓繗顓?/span>
+      <span id="subtotal">妤?.00</span>
     </div>
     <div class="order-total-line">
-      <span data-i18n="checkout.shipping">杩愯垂</span>
-      <span>楼0.00</span>
+      <span data-i18n="checkout.shipping">鏉╂劘鍨?/span>
+      <span>妤?.00</span>
     </div>
     <div class="order-total-line big">
-      <span data-i18n="checkout.total">鍚堣</span>
-      <span id="total">楼0.00</span>
+      <span data-i18n="checkout.total">閸氬牐顓?/span>
+      <span id="total">妤?.00</span>
     </div>
     <div style="margin-top:15px;">
       <div style="padding:12px;background:#f0f4ff;border-radius:8px;font-size:0.85rem;border:1px solid #d4e2ff;">
         <strong style="color:#003087;">PayPal</strong><br>
-        <span style="color:#666;">鏀寔鍏ㄧ悆淇＄敤鍗′粯娆?路 鍥藉唴鍙敞鍐?路 鎻愮幇鍒伴摱琛屽崱</span>
+        <span style="color:#666;">閺€顖涘瘮閸忋劎鎮嗘穱锛勬暏閸椻€茬帛濞?璺?閸ヨ棄鍞撮崣顖涙暈閸?璺?閹绘劗骞囬崚浼存懕鐞涘苯宕?/span>
       </div>
     </div>
     <div class="payment-icons" style="margin-top:15px;font-size:2rem;">
-      馃挸 馃挵 馃挌 馃挋
+      棣冩尭 棣冩尩 棣冩寣 棣冩寢
     </div>
   </div>
 </section>
 
-<!-- 璐墿杞︿晶鏍?-->
+<!-- 鐠愵厾澧挎潪锔挎櫠閺?-->
 <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
 <div class="cart-sidebar" id="cartSidebar">
   <div class="cart-header">
-    <h3 data-i18n="cart.title">馃洅 璐墿杞?/h3>
-    <button class="cart-close" onclick="toggleCart()">鉁?/button>
+    <h3 data-i18n="cart.title">棣冩磪 鐠愵厾澧挎潪?/h3>
+    <button class="cart-close" onclick="toggleCart()">閴?/button>
   </div>
   <div class="cart-items" id="cartItems">
-    <div class="cart-empty"><div class="cart-empty-icon">馃洅</div><p data-i18n="cart.empty">璐墿杞﹁繕鏄┖鐨?/p></div>
+    <div class="cart-empty"><div class="cart-empty-icon">棣冩磪</div><p data-i18n="cart.empty">鐠愵厾澧挎潪锕佺箷閺勵垳鈹栭惃?/p></div>
   </div>
   <div class="cart-footer" id="cartFooter" style="display:none;">
-    <div class="cart-total"><span data-i18n="cart.total">鍚堣</span><span id="cartTotalPrice">楼0.00</span></div>
-    <a href="checkout.html" class="btn btn-primary cart-checkout-btn" data-i18n="cart.checkout">鍘荤粨绠?鈫?/a>
+    <div class="cart-total"><span data-i18n="cart.total">閸氬牐顓?/span><span id="cartTotalPrice">妤?.00</span></div>
+    <a href="checkout.html" class="btn btn-primary cart-checkout-btn" data-i18n="cart.checkout">閸樿崵绮ㄧ粻?閳?/a>
   </div>
 </div>
 
@@ -179,9 +179,9 @@ function renderOrderSummary() {
   const t = (key) => i18n?.t(key) ?? key;
 
   if (cart.length === 0) {
-    container.innerHTML = '<p style="color:#666;text-align:center;padding:20px 0;">鏆傛棤鍟嗗搧</p>';
-    if (subtotalEl) subtotalEl.textContent = "楼0.00";
-    if (totalEl) totalEl.textContent = "楼0.00";
+    container.innerHTML = '<p style="color:#666;text-align:center;padding:20px 0;">閺嗗倹妫ら崯鍡楁惂</p>';
+    if (subtotalEl) subtotalEl.textContent = "妤?.00";
+    if (totalEl) totalEl.textContent = "妤?.00";
     if (btn) btn.disabled = true;
     return;
   }
@@ -189,26 +189,26 @@ function renderOrderSummary() {
 
   container.innerHTML = cart.map(item => `
     <div class="order-item">
-      <div class="order-item-image">${item.icon || "馃摝"}</div>
+      <div class="order-item-image">${item.icon || "棣冩憹"}</div>
       <div class="order-item-info">
-        <div style="font-weight:600;">${item.name} 脳 ${item.qty}</div>
-        <div class="order-item-price">楼${(item.price * item.qty).toFixed(2)}</div>
+        <div style="font-weight:600;">${item.name} 鑴?${item.qty}</div>
+        <div class="order-item-price">妤?{(item.price * item.qty).toFixed(2)}</div>
       </div>
     </div>
   `).join("");
 
   const subtotal = cart.reduce((s, item) => s + item.price * item.qty, 0);
-  if (subtotalEl) subtotalEl.textContent = `楼${subtotal.toFixed(2)}`;
-  if (totalEl) totalEl.textContent = `楼${subtotal.toFixed(2)}`;
+  if (subtotalEl) subtotalEl.textContent = `妤?{subtotal.toFixed(2)}`;
+  if (totalEl) totalEl.textContent = `妤?{subtotal.toFixed(2)}`;
 }
 
-// 鍒囨崲鏀粯鏂瑰紡鏃舵洿鏂版寜閽枃瀛?document.querySelectorAll('input[name="payment"]').forEach(input => {
+// 閸掑洦宕查弨顖欑帛閺傜懓绱￠弮鑸垫纯閺傜増瀵滈柦顔芥瀮鐎?document.querySelectorAll('input[name="payment"]').forEach(input => {
   input.addEventListener("change", function() {
     const btn = document.getElementById("checkoutBtn");
     if (this.value === "paypal") {
-      btn.innerHTML = "馃挵 浣跨敤 PayPal 鏀粯";
+      btn.innerHTML = "棣冩尩 娴ｈ法鏁?PayPal 閺€顖欑帛";
     } else {
-      btn.innerHTML = "馃挸 浣跨敤 Stripe 鏀粯";
+      btn.innerHTML = "棣冩尭 娴ｈ法鏁?Stripe 閺€顖欑帛";
     }
   });
 });
@@ -225,13 +225,13 @@ async function handleCheckout() {
   const t = (key, vars) => i18n?.t(key, vars) ?? key;
 
   if (!firstName || !lastName || !email || !phone || !address || !city || !zip) {
-    showToast("鈿狅笍 璇峰～鍐欐墍鏈夊繀濉瓧娈?);
+    showToast("閳跨媴绗?鐠囧嘲锝為崘娆愬閺堝绻€婵夘偄鐡у▓?);
     return;
   }
 
   const cart = JSON.parse(localStorage.getItem("lustrevault_cart")) || [];
   if (cart.length === 0) {
-    showToast("鈿狅笍 璐墿杞︿负绌?);
+    showToast("閳跨媴绗?鐠愵厾澧挎潪锔胯礋缁?);
     return;
   }
 
@@ -240,11 +240,11 @@ async function handleCheckout() {
 
   const btn = document.getElementById("checkoutBtn");
   btn.disabled = true;
-  btn.innerHTML = "鈴?澶勭悊涓?..";
+  btn.innerHTML = "閳?婢跺嫮鎮婃稉?..";
 
   try {
     if (paymentMethod === "paypal") {
-      // 璋冪敤 PayPal API
+      // 鐠嬪啰鏁?PayPal API
       const res = await fetch("/api/create-paypal-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -255,20 +255,19 @@ async function handleCheckout() {
       });
       const data = await res.json();
       if (data.url) {
-        // 淇濆瓨璁㈠崟淇℃伅鍒?sessionStorage锛屾敮浠樻垚鍔熼〉鍙互浣跨敤
-        sessionStorage.setItem("pending_order", JSON.stringify({
+        // 娣囨繂鐡ㄧ拋銏犲礋娣団剝浼呴崚?sessionStorage閿涘本鏁禒妯诲灇閸旂喖銆夐崣顖欎簰娴ｈ法鏁?        sessionStorage.setItem("pending_order", JSON.stringify({
           name: `${firstName} ${lastName}`,
           email,
           method: "paypal"
         }));
         window.location.href = data.url;
       } else {
-        showToast("鈿狅笍 PayPal 鏈嶅姟寮傚父锛岃绋嶅悗閲嶈瘯");
+        showToast("閳跨媴绗?PayPal 閺堝秴濮熷鍌氱埗閿涘矁顕粙宥呮倵闁插秷鐦?);
         btn.disabled = false;
-        btn.innerHTML = "馃挵 浣跨敤 PayPal 鏀粯";
+        btn.innerHTML = "棣冩尩 娴ｈ法鏁?PayPal 閺€顖欑帛";
       }
     } else {
-      // Stripe 鏀粯
+      // Stripe 閺€顖欑帛
       const res = await fetch("/api/create-checkout-session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -281,20 +280,19 @@ async function handleCheckout() {
       if (data.url) {
         window.location.href = data.url;
       } else {
-        showToast("鈿狅笍 鏀粯鏈嶅姟寮傚父");
+        showToast("閳跨媴绗?閺€顖欑帛閺堝秴濮熷鍌氱埗");
         btn.disabled = false;
-        btn.innerHTML = "馃挸 浣跨敤 Stripe 鏀粯";
+        btn.innerHTML = "棣冩尭 娴ｈ法鏁?Stripe 閺€顖欑帛";
       }
     }
   } catch (err) {
-    showToast("鈿狅笍 缃戠粶閿欒锛岃閲嶈瘯");
+    showToast("閳跨媴绗?缂冩垹绮堕柨娆掝嚖閿涘矁顕柌宥堢槸");
     btn.disabled = false;
-    btn.innerHTML = paymentMethod === "paypal" ? "馃挵 浣跨敤 PayPal 鏀粯" : "馃挸 浣跨敤 Stripe 鏀粯";
+    btn.innerHTML = paymentMethod === "paypal" ? "棣冩尩 娴ｈ法鏁?PayPal 閺€顖欑帛" : "棣冩尭 娴ｈ法鏁?Stripe 閺€顖欑帛";
   }
 }
 
-// 鐩戝惉璇█鍒囨崲
-document.addEventListener("langchange", function() {
+// 閻╂垵鎯夌拠顓♀枅閸掑洦宕?document.addEventListener("langchange", function() {
   renderOrderSummary();
   window.__i18n?.apply();
   const countrySelect = document.getElementById("country");
@@ -305,14 +303,9 @@ document.addEventListener("langchange", function() {
   }
 });
 
-const checkI18n = setInterval(() => {
-  if (window.__i18n && Object.keys(window.__i18n._data).length > 0) {
-    clearInterval(checkI18n);
-    renderOrderSummary();
-  }
-}, 100);
+
 </script>
-<!-- ===== WhatsApp 娴姩鎸夐挳 ===== -->
+<!-- ===== WhatsApp 濞搭喖濮╅幐澶愭尦 ===== -->
 <a href="https://wa.me/8615966610220" target="_blank" rel="noopener" style="position:fixed;bottom:20px;right:20px;z-index:9999;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(37,211,102,0.4);transition:all 0.3s;text-decoration:none;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a></body>
