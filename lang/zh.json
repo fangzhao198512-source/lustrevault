@@ -1,4 +1,4 @@
-
+{
   "brand": "LustreVault",
   "nav": {
     "home": "首页",
@@ -16,11 +16,26 @@
   "categories": {
     "title": "产品分类",
     "subtitle": "找到适合你的那一款",
-    "vibrator": { "name": "震动棒", "desc": "经典与智能之选" },
-    "dildo": { "name": "仿真阳具", "desc": "真实触感体验" },
-    "couple": { "name": "情侣玩具", "desc": "双人共赴愉悦" },
-    "bdsm": { "name": "束缚与调教", "desc": "探索更多可能" },
-    "lubricant": { "name": "润滑液", "desc": "顺滑体验必备" }
+    "vibrator": {
+      "name": "震动棒",
+      "desc": "经典与智能之选"
+    },
+    "dildo": {
+      "name": "仿真阳具",
+      "desc": "真实触感体验"
+    },
+    "couple": {
+      "name": "情侣玩具",
+      "desc": "双人共赴愉悦"
+    },
+    "bdsm": {
+      "name": "束缚与调教",
+      "desc": "探索更多可能"
+    },
+    "lubricant": {
+      "name": "润滑液",
+      "desc": "顺滑体验必备"
+    }
   },
   "products": {
     "title": "所有产品",
@@ -29,69 +44,93 @@
     "specs": "规格",
     "rating": "评价",
     "originalPrice": "原价",
-        "data": [
+    "data": [
       {
         "id": 1,
         "name": "智能温控震动棒",
         "category": "vibrator",
-        "desc": "采用食品级硅胶材质，10种震动模式，智能温控加热，静音马达，USB磁吸充电，续航可达2小时。防水设计，可在浴室使用。",
-        "specs": ["食品级硅胶 | 22cm | 3.5cm直径 | 续航2小时", "USB磁吸充电"],
+        "desc": "采用食品级硅胶材质，10种震动模式，智能温控加热，静音马达，USB磁吸充电，续航可达2小时。",
+        "specs": [
+          "食品级硅胶 | 22cm | 3.5cm直径",
+          "USB磁吸充电"
+        ],
         "badge": "热卖"
       },
       {
         "id": 2,
         "name": "超真实按摩棒 Pro",
         "category": "dildo",
-        "desc": "仿生设计，仿真皮肤触感，内部骨架可弯曲定型。适合各个阶段玩家，入门必备之选。",
-        "specs": ["液态硅胶 | 20cm | 4cm直径", "可弯曲定型"],
+        "desc": "仿生设计，仿真皮肤触感，内部骨架可弯曲定型。适合各个阶段玩家。",
+        "specs": [
+          "液态硅胶 | 20cm | 4cm直径",
+          "可弯曲定型"
+        ],
         "badge": "新品"
       },
       {
         "id": 3,
         "name": "情侣远程互动跳蛋",
         "category": "couple",
-        "desc": "支持手机APP远程控制，异地情侣互动首选。超静音设计，多种模式随心切换。",
-        "specs": ["蓝牙远程控制 | 10种模式", "超静音 | 续航4小时 | IPX7防水"],
+        "desc": "手机APP远程控制，异地情侣互动首选。超静音设计。",
+        "specs": [
+          "蓝牙远程控制 | 10种模式",
+          "超静音 | IPX7防水"
+        ],
         "badge": "热卖"
       },
       {
         "id": 4,
         "name": "奢华真皮眼罩套装",
         "category": "bdsm",
-        "desc": "高级真皮材质，柔软内衬，可调节松紧带。配赠丝绸绑带一对，探索你的感官世界。",
-        "specs": ["进口真皮 | 天鹅绒内衬", "可调节 | 配赠丝绸绑带"],
+        "desc": "高级真皮材质，柔软内衬，可调节松紧带。配赠丝绸绑带。",
+        "specs": [
+          "进口真皮 | 天鹅绒内衬",
+          "可调节 | 配赠丝绸绑带"
+        ],
         "badge": "入门"
       },
       {
         "id": 5,
         "name": "水溶性润滑液 200ml",
         "category": "lubricant",
-        "desc": "温和配方，无刺激，无味透明。与安全套及玩具兼容，水溶性易清洗。",
-        "specs": ["200ml | 水溶性 | 无刺激", "与安全套兼容 | 易清洗"],
+        "desc": "温和配方，无刺激，无味透明。与安全套及玩具兼容。",
+        "specs": [
+          "200ml | 水溶性 | 无刺激",
+          "易清洗"
+        ],
         "badge": "必备"
       },
       {
         "id": 6,
         "name": "G点专用震动棒",
         "category": "vibrator",
-        "desc": "独特弧形弯头设计，精确刺激G点区域。20种震动频率，满足不同需求。",
-        "specs": ["食品级硅胶 | 弧型弯头", "20种模式 | 续航3小时 | IPX7防水"],
+        "desc": "独特弧形弯头设计，精确刺激G点区域。20种震动频率。",
+        "specs": [
+          "食品级硅胶 | 弧型弯头",
+          "20种模式 | IPX7防水"
+        ],
         "badge": "热卖"
       },
       {
         "id": 7,
         "name": "双头穿戴假阳具",
         "category": "dildo",
-        "desc": "情侣双用设计，穿戴式使用。双端同时刺激，增强伴侣间互动体验。",
-        "specs": ["液态硅胶 | 穿戴式设计", "双端刺激 | 可调节松紧带"],
+        "desc": "情侣双用设计，穿戴式使用。双端同时刺激。",
+        "specs": [
+          "液态硅胶 | 穿戴式设计",
+          "双端刺激 | 可调节"
+        ],
         "badge": "热卖"
       },
       {
         "id": 8,
         "name": "羽毛挑逗套装",
         "category": "bdsm",
-        "desc": "轻柔羽毛触感，从轻抚到挑逗，适合前戏与感官探索。附赠收纳袋。",
-        "specs": ["天然鸵鸟毛 | 人体工学手柄", "附赠收纳袋 | 入门推荐"],
+        "desc": "轻柔羽毛触感，从轻抚到挑逗，适合前戏与感官探索。",
+        "specs": [
+          "天然鸵鸟毛 | 人体工学手柄",
+          "附赠收纳袋"
+        ],
         "badge": "入门"
       }
     ]
@@ -99,17 +138,39 @@
   "features": {
     "title": "为什么选择我们",
     "subtitle": "让你放心购买，安心享受",
-    "privacy": { "title": "绝对隐私发货", "desc": "中性包装，无任何敏感标识。快递单上仅显示收件信息，保护你的隐私周全。" },
-    "safety": { "title": "安全材质保证", "desc": "所有产品均采用食品级硅胶、ABS 环保材质，通过 SGS 等国际安全认证。" },
-    "support": { "title": "WhatsApp 客服支持", "desc": "点击右下角 WhatsApp 图标直接与我们联系，任何产品问题或使用疑问，我们随时为你解答。" },
-    "returns": { "title": "30天退换无忧", "desc": "收货后30天内不满意可退换。你的满意是我们唯一的追求。" }
+    "privacy": {
+      "title": "绝对隐私发货",
+      "desc": "中性包装，无任何敏感标识。快递单上仅显示收件信息。"
+    },
+    "safety": {
+      "title": "安全材质保证",
+      "desc": "所有产品均采用食品级硅胶、ABS 环保材质，通过 SGS 国际安全认证。"
+    },
+    "support": {
+      "title": "WhatsApp 客服支持",
+      "desc": "点击右下角 WhatsApp 图标直接与我们联系，随时为你解答。"
+    },
+    "returns": {
+      "title": "30天退换无忧",
+      "desc": "收货后30天内不满意可退换。你的满意是我们的追求。"
+    }
   },
   "footer": {
     "about": "专注高品质成人情趣用品，为你的愉悦而生。",
     "quickLinks": "快速链接",
-    "links": ["关于我们", "隐私政策", "配送说明", "退换政策"],
+    "links": [
+      "关于我们",
+      "隐私政策",
+      "配送说明",
+      "退换政策"
+    ],
     "service": "客户服务",
-    "serviceLinks": ["常见问题", "WhatsApp 咨询", "尺寸指南", "使用教程"],
+    "serviceLinks": [
+      "常见问题",
+      "WhatsApp 咨询",
+      "尺寸指南",
+      "使用教程"
+    ],
     "contact": "联系我们",
     "contactWhatsApp": "📱 WhatsApp：+86 159 6661 0220",
     "contactChat": "💬 在线客服：24/7 回复",
@@ -144,19 +205,28 @@
     "zip": "邮编",
     "zipPlaceholder": "518000",
     "note": "备注",
-    "notePlaceholder": "如有特殊要求请备注（如配送时间等）",
+    "notePlaceholder": "如有特殊要求请备注",
     "payment": "支付方式",
     "payBtn": "💰 去支付",
-    "secure": "🔒 支付信息通过 SSL 加密传输，安全可靠",
+    "secure": "🔒 SSL加密传输",
     "required": "⚠️ 请填写所有必填字段",
     "processing": "⏳ 处理中...",
-    "error": "⚠️ 网络错误，请重试",
+    "error": "⚠️ 网络错误",
     "orderSummary": "📋 订单摘要",
     "subtotal": "小计",
     "shipping": "运费",
     "total": "合计",
-    "privacyNote": "🔒 隐私保护：中性包装发货，快递单无敏感信息",
-    "countries": ["中国 (China)", "美国 (United States)", "日本 (Japan)", "韩国 (South Korea)", "英国 (United Kingdom)", "澳大利亚 (Australia)", "加拿大 (Canada)", "其他国家/地区"],
+    "privacyNote": "🔒 中性包装发货，快递单无敏感信息",
+    "countries": [
+      "中国 (China)",
+      "美国 (United States)",
+      "日本 (Japan)",
+      "韩国 (South Korea)",
+      "英国 (United Kingdom)",
+      "澳大利亚 (Australia)",
+      "加拿大 (Canada)",
+      "其他国家/地区"
+    ],
     "paymentMethods": {
       "stripe": "💳 信用卡 (Stripe)",
       "paypal": "💰 PayPal",
@@ -173,15 +243,15 @@
   },
   "success": {
     "title": "支付成功！",
-    "message": "感谢你的购买！我们会尽快为你安排发货。<br>如有疑问请联系 WhatsApp：+86 159 6661 0220",
+    "message": "感谢你的购买！我们会尽快安排发货。<br>如有疑问请联系 WhatsApp：+86 159 6661 0220",
     "orderId": "订单编号",
     "paymentMethod": "支付方式",
     "paymentValue": "信用卡 (Stripe)",
     "shipping": "预计配送",
     "shippingValue": "3-7 个工作日",
-    "privacyNote": "🔒 我们严格保护你的隐私，发货为中性包装",
+    "privacyNote": "🔒 我们严格保护你的隐私",
     "continue": "继续购物",
-    "demoOrder": "🎉 订单提交成功！\n\n感谢你的购买，{name}！\n订单确认后将通过 WhatsApp 联系你\n\n🔒 你的隐私我们将严格保护。"
+    "demoOrder": "🎉 订单提交成功！\n\n感谢你的购买，{name}！\n订单确认后将通过 WhatsApp 联系你"
   },
   "lang": {
     "zh": "中文",

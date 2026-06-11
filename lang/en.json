@@ -1,4 +1,4 @@
-
+{
   "brand": "LustreVault",
   "nav": {
     "home": "Home",
@@ -9,18 +9,33 @@
   "hero": {
     "badge": "🔒 Discreet Shipping · Worldwide Delivery",
     "title": "Explore Your{span}Desires{/span}",
-    "subtitle": "Curated premium adult products from around the world, designed for your pleasure.<br>Every item is carefully selected — from materials to design — for the best experience.",
+    "subtitle": "Curated premium adult products from around the world, designed for your pleasure.",
     "cta": "Shop Now",
     "learnMore": "Learn More"
   },
   "categories": {
     "title": "Categories",
     "subtitle": "Find what suits you",
-    "vibrator": { "name": "Vibrators", "desc": "Classic & smart picks" },
-    "dildo": { "name": "Dildos", "desc": "Realistic sensation" },
-    "couple": { "name": "Couple Toys", "desc": "Shared pleasure" },
-    "bdsm": { "name": "BDSM & Bondage", "desc": "Explore more" },
-    "lubricant": { "name": "Lubricants", "desc": "Smooth experience" }
+    "vibrator": {
+      "name": "Vibrators",
+      "desc": "Classic & smart picks"
+    },
+    "dildo": {
+      "name": "Dildos",
+      "desc": "Realistic sensation"
+    },
+    "couple": {
+      "name": "Couple Toys",
+      "desc": "Shared pleasure"
+    },
+    "bdsm": {
+      "name": "BDSM & Bondage",
+      "desc": "Explore more"
+    },
+    "lubricant": {
+      "name": "Lubricants",
+      "desc": "Smooth experience"
+    }
   },
   "products": {
     "title": "All Products",
@@ -29,87 +44,133 @@
     "specs": "Specifications",
     "rating": "reviews",
     "originalPrice": "was",
-        "data": [
+    "data": [
       {
         "id": 1,
         "name": "Smart Temperature Vibrator",
         "category": "vibrator",
-        "desc": "Food-grade silicone, 10 vibration modes, smart temperature control, quiet motor, USB magnetic charging, 2-hour battery. Waterproof for bath use.",
-        "specs": ["Food-grade silicone | 22cm | 3.5cm dia | 2hr battery", "USB magnetic charging"],
+        "desc": "Food-grade silicone, 10 vibration modes, smart temperature control, quiet motor.",
+        "specs": [
+          "Food-grade silicone | 22cm | 3.5cm dia",
+          "USB magnetic charging"
+        ],
         "badge": "Hot"
       },
       {
         "id": 2,
         "name": "Ultra Realistic Massager Pro",
         "category": "dildo",
-        "desc": "Bio-mimetic design with skin-like texture. Bendable inner skeleton. Suitable for all experience levels.",
-        "specs": ["Liquid silicone | 20cm | 4cm dia", "Bendable skeleton"],
+        "desc": "Bio-mimetic design with skin-like texture. Bendable inner skeleton.",
+        "specs": [
+          "Liquid silicone | 20cm | 4cm dia",
+          "Bendable skeleton"
+        ],
         "badge": "New"
       },
       {
         "id": 3,
         "name": "Long Distance Couple Egg",
         "category": "couple",
-        "desc": "APP remote control, perfect for long-distance couples. Ultra quiet, multiple modes.",
-        "specs": ["Bluetooth remote | 10 modes", "Ultra quiet | 4hr battery | IPX7"],
+        "desc": "APP remote control, perfect for long-distance couples. Ultra quiet.",
+        "specs": [
+          "Bluetooth remote | 10 modes",
+          "Ultra quiet | IPX7"
+        ],
         "badge": "Hot"
       },
       {
         "id": 4,
         "name": "Luxury Leather Blindfold Set",
         "category": "bdsm",
-        "desc": "Premium genuine leather, soft lining, adjustable strap. Comes with silk restraints. Explore your senses.",
-        "specs": ["Genuine leather | Velvet lining", "Adjustable | Silk restraints included"],
+        "desc": "Premium genuine leather, soft lining, adjustable strap. Silk restraints included.",
+        "specs": [
+          "Genuine leather | Velvet lining",
+          "Adjustable | Silk restraints"
+        ],
         "badge": "Starter"
       },
       {
         "id": 5,
         "name": "Water-based Lubricant 200ml",
         "category": "lubricant",
-        "desc": "Gentle formula, no irritation, odorless & transparent. Compatible with condoms and toys. Easy to wash off.",
-        "specs": ["200ml | Water-based | No irritation", "Condom compatible | Easy wash"],
+        "desc": "Gentle formula, no irritation, odorless & transparent. Easy to wash off.",
+        "specs": [
+          "200ml | Water-based | No irritation",
+          "Easy wash"
+        ],
         "badge": "Essential"
       },
       {
         "id": 6,
         "name": "G-Spot Vibrator",
         "category": "vibrator",
-        "desc": "Unique curved tip for precise G-spot stimulation. 20 vibration frequencies to suit every need.",
-        "specs": ["Food-grade silicone | Curved tip", "20 modes | 3hr battery | IPX7"],
+        "desc": "Unique curved tip for precise G-spot stimulation. 20 vibration frequencies.",
+        "specs": [
+          "Food-grade silicone | Curved tip",
+          "20 modes | IPX7"
+        ],
         "badge": "Hot"
       },
       {
         "id": 7,
         "name": "Double-Ended Strap-On",
         "category": "dildo",
-        "desc": "Couple dual-use design, wearable. Simultaneous dual stimulation for enhanced shared experience.",
-        "specs": ["Liquid silicone | Wearable", "Dual stimulation | Adjustable straps"],
+        "desc": "Couple dual-use design, wearable. Dual stimulation for shared experience.",
+        "specs": [
+          "Liquid silicone | Wearable",
+          "Dual stimulation | Adjustable"
+        ],
         "badge": "Hot"
       },
       {
         "id": 8,
         "name": "Feather Tease Kit",
         "category": "bdsm",
-        "desc": "Soft feather touch, from gentle strokes to teasing. Perfect for foreplay and sensory exploration.",
-        "specs": ["Natural ostrich feathers | Ergonomic handle", "Storage pouch included | Beginner friendly"],
+        "desc": "Soft feather touch, gentle strokes to teasing. Perfect for foreplay.",
+        "specs": [
+          "Natural ostrich feathers | Ergonomic handle",
+          "Storage pouch included"
+        ],
         "badge": "Starter"
       }
     ]
   },
   "features": {
     "title": "Why Choose Us",
-    "subtitle": "Buy with confidence, enjoy with peace of mind",
-    "privacy": { "title": "Absolute Privacy", "desc": "Neutral packaging with no sensitive labels. The shipping label shows only your delivery info — your privacy is fully protected." },
-    "safety": { "title": "Safe Materials", "desc": "All products use food-grade silicone and ABS eco-friendly materials, certified by SGS and international safety standards." },
-    "support": { "title": "WhatsApp Support", "desc": "Click the WhatsApp icon in the bottom right to contact us directly. We are here for you anytime, 24/7." },
-    "returns": { "title": "30-Day Returns", "desc": "Not satisfied within 30 days? Return or exchange. Your satisfaction is our only commitment." }
+    "subtitle": "Buy with confidence",
+    "privacy": {
+      "title": "Absolute Privacy",
+      "desc": "Neutral packaging with no sensitive labels. Your privacy is protected."
+    },
+    "safety": {
+      "title": "Safe Materials",
+      "desc": "Food-grade silicone and ABS eco-friendly materials, SGS certified."
+    },
+    "support": {
+      "title": "WhatsApp Support",
+      "desc": "Click the WhatsApp icon to contact us directly. 24/7 support."
+    },
+    "returns": {
+      "title": "30-Day Returns",
+      "desc": "Not satisfied within 30 days? Return or exchange."
+    }
   },
   "footer": {
     "about": "Premium adult products curated for your pleasure.",
     "quickLinks": "Quick Links",
-    "links": ["About Us", "Privacy Policy", "Shipping Info", "Returns Policy"],
+    "links": [
+      "About Us",
+      "Privacy Policy",
+      "Shipping Info",
+      "Returns Policy"
+    ],
     "service": "Customer Service",
-    "serviceLinks": ["FAQ", "WhatsApp Chat", "Size Guide", "Usage Guide"],
+    "serviceLinks": [
+      "FAQ",
+      "WhatsApp Chat",
+      "Size Guide",
+      "Usage Guide"
+    ],
     "contact": "Contact Us",
     "contactWhatsApp": "📱 WhatsApp: +86 159 6661 0220",
     "contactChat": "💬 Live Chat: 24/7",
@@ -147,16 +208,25 @@
     "notePlaceholder": "Any special requests",
     "payment": "Payment Method",
     "payBtn": "💰 Pay Now",
-    "secure": "🔒 Secured by SSL encryption",
-    "required": "⚠️ Please fill in all required fields",
+    "secure": "🔒 Secured by SSL",
+    "required": "⚠️ Please fill all required fields",
     "processing": "⏳ Processing...",
-    "error": "⚠️ Network error, please try again",
+    "error": "⚠️ Network error",
     "orderSummary": "📋 Order Summary",
     "subtotal": "Subtotal",
     "shipping": "Shipping",
     "total": "Total",
-    "privacyNote": "🔒 Privacy protected: neutral packaging, no sensitive info on labels",
-    "countries": ["China (中国)", "United States (美国)", "Japan (日本)", "South Korea (韩国)", "United Kingdom (英国)", "Australia (澳大利亚)", "Canada (加拿大)", "Other countries"],
+    "privacyNote": "🔒 Neutral packaging, no sensitive info on labels",
+    "countries": [
+      "China (中国)",
+      "United States (美国)",
+      "Japan (日本)",
+      "South Korea (韩国)",
+      "United Kingdom (英国)",
+      "Australia (澳大利亚)",
+      "Canada (加拿大)",
+      "Other countries"
+    ],
     "paymentMethods": {
       "stripe": "💳 Credit Card (Stripe)",
       "paypal": "💰 PayPal",
@@ -173,15 +243,15 @@
   },
   "success": {
     "title": "Payment Successful!",
-    "message": "Thank you for your purchase! We will process your order soon.<br>For inquiries, contact us on WhatsApp: +86 159 6661 0220",
+    "message": "Thank you! We will process your order.<br>WhatsApp: +86 159 6661 0220",
     "orderId": "Order ID",
     "paymentMethod": "Payment",
     "paymentValue": "Credit Card (Stripe)",
     "shipping": "Delivery",
     "shippingValue": "3-7 business days",
-    "privacyNote": "🔒 Your privacy is fully protected — discreet packaging guaranteed",
+    "privacyNote": "🔒 Your privacy is fully protected",
     "continue": "Continue Shopping",
-    "demoOrder": "🎉 Order placed successfully!\n\nThank you for your purchase, {name}!\nWe will contact you via WhatsApp for confirmation.\n\n🔒 Your privacy is fully protected."
+    "demoOrder": "🎉 Order placed!\n\nThank you, {name}!\nWe will contact you via WhatsApp."
   },
   "lang": {
     "zh": "中文",
