@@ -1,73 +1,23 @@
-/* ===== 多语言系统 v2 — 内联加载，无需额外请求 ===== */
+/* ===== 多语言系统 v5 ===== */
 (function() {
-  const DEFAULT_LANG = "zh";
-  const STORAGE_KEY = "lustrevault_lang";
-
-  // 语言文件已在 HTML 中通过 script 标签预加载
-  window.__i18n = window.__i18n || {};
-
-  const i18n = {
-    lang: localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG,
-    _data: {},
-
-    init(langData) {
-      this._data = langData;
-      this.apply();
+  var langData = {};
+  var currentLang = localStorage.getItem("lustrevault_lang") || "zh";
+  window.__i18n = {
+    init: function(data) { langData = data; this.apply(); if (typeof renderProducts === "function") renderProducts(); var s = document.querySelectorAll(".lang-select"); for (var i = 0; i < s.length; i++) s[i].value = currentLang; },
+    t: function(key, vars) {
+      if (!key) return key;
+      var val = this._get(langData[currentLang], key);
+      if (val == null) val = this._get(langData["zh"], key);
+      if (typeof val === "string") return val.replace(/\{(\w+)\}/g, function(_, k) { return vars && vars[k] != null ? vars[k] : "{" + k + "}"; });
+      return val != null ? val : key;
     },
-
-    t(key, vars) {
-      let val = this._data[this.lang];
-      const keys = key.split(".");
-      for (const k of keys) {
-        val = val?.[k];
-      }
-      if (val === undefined) {
-        val = this._data[DEFAULT_LANG];
-        for (const k of keys) {
-          val = val?.[k];
-        }
-      }
-      if (typeof val === "string") {
-        return val.replace(/\{(\w+)\}/g, (_, k) => vars?.[k] ?? `{${k}}`);
-      }
-      return val ?? key;
-    },
-
-    setLang(lang) {
-      if (!this._data[lang]) return;
-      this.lang = lang;
-      localStorage.setItem(STORAGE_KEY, lang);
-      this.apply();
-      // 触发表单、产品等动态内容的重新渲染
-      document.dispatchEvent(new CustomEvent("langchange", { detail: { lang } }));
-    },
-
-    apply() {
-      document.documentElement.lang = this.lang === "zh" ? "zh-CN" : this.lang;
-      // 更新所有 data-i18n 元素
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        const translated = this.t(key);
-        if (translated !== undefined && translated !== key) {
-          el.textContent = translated;
-        }
-      });
-      // 更新 data-i18n-placeholder
-      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-        const key = el.getAttribute("data-i18n-placeholder");
-        el.placeholder = this.t(key);
-      });
-      // 更新 data-i18n-value
-      document.querySelectorAll("[data-i18n-value]").forEach(el => {
-        const key = el.getAttribute("data-i18n-value");
-        el.value = this.t(key);
-      });
-      // 更新语言切换器选中状态
-      document.querySelectorAll(".lang-switcher select, .lang-select").forEach(sel => {
-        sel.value = this.lang;
-      });
+    _get: function(obj, key) { if (!obj) return null; var keys = key.split("."); for (var i = 0; i < keys.length; i++) { obj = obj[keys[i]]; if (obj == null) return null; } return obj; },
+    setLang: function(lang) { if (!langData[lang]) { currentLang = lang; localStorage.setItem("lustrevault_lang", lang); return; } currentLang = lang; localStorage.setItem("lustrevault_lang", lang); this.apply(); if (typeof renderProducts === "function") renderProducts(); var s = document.querySelectorAll(".lang-select"); for (var i = 0; i < s.length; i++) s[i].value = lang; document.documentElement.lang = lang === "zh" ? "zh-CN" : lang; },
+    apply: function() {
+      function upd(attr, prop) { var els = document.querySelectorAll("[" + attr + "]"); for (var i = 0; i < els.length; i++) { var key = els[i].getAttribute(attr); if (key) { var t = window.__i18n.t(key); if (t && t !== key) els[i][prop] = t; } } }
+      upd("data-i18n", "textContent");
+      upd("data-i18n-placeholder", "placeholder");
+      upd("data-i18n-value", "value");
     }
   };
-
-  window.__i18n = i18n;
 })();
