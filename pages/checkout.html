@@ -98,24 +98,23 @@
 
     <div class="form-group" style="margin-top:25px;">
       <label style="font-size:1rem;" data-i18n="checkout.payment">支付方式</label>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;">
-        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
-          <input type="radio" name="payment" value="stripe" checked> <span data-i18n="checkout.paymentMethods.stripe">💳 信用卡 (Stripe)</span>
+      <div style="display:flex;flex-wrap:wrap;gap:15px;margin-top:10px;">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:12px 18px;border:2px solid var(--gray-200);border-radius:12px;transition:all 0.3s;" id="paypalLabel">
+          <input type="radio" name="payment" value="paypal" checked>
+          <span style="font-size:1.5rem;font-weight:700;color:#003087;">PayPal</span>
+          <span style="font-size:0.8rem;color:#666;">🌍 全球收款</span>
         </label>
-        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
-          <input type="radio" name="payment" value="paypal"> <span data-i18n="checkout.paymentMethods.paypal">💰 PayPal</span>
-        </label>
-        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
-          <input type="radio" name="payment" value="wechat"> <span data-i18n="checkout.paymentMethods.wechat">💚 微信支付</span>
-        </label>
-        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;">
-          <input type="radio" name="payment" value="alipay"> <span data-i18n="checkout.paymentMethods.alipay">💙 支付宝</span>
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:12px 18px;border:2px solid var(--gray-200);border-radius:12px;transition:all 0.3s;" id="stripeLabel">
+          <input type="radio" name="payment" value="stripe">
+          <span style="font-size:1.1rem;">💳 Stripe</span>
+          <span style="font-size:0.8rem;color:#666;">信用卡</span>
         </label>
       </div>
+      <p style="font-size:0.8rem;color:#999;margin-top:8px;">💡 推荐使用 PayPal — 国内可注册，支持全球付款</p>
     </div>
 
-    <button class="btn btn-primary" style="width:100%;margin-top:20px;" id="checkoutBtn" onclick="handleCheckout()">
-      <span data-i18n="checkout.payBtn">💳 去支付</span>
+    <button class="btn btn-primary" style="width:100%;margin-top:20px;font-size:1.1rem;padding:16px;" id="checkoutBtn" onclick="handleCheckout()">
+      💰 使用 PayPal 支付
     </button>
     <p style="font-size:0.8rem;color:#999;margin-top:10px;text-align:center;" data-i18n="checkout.secure">🔒 支付信息通过 SSL 加密传输，安全可靠</p>
   </div>
@@ -136,10 +135,13 @@
       <span data-i18n="checkout.total">合计</span>
       <span id="total">¥0.00</span>
     </div>
-    <div style="margin-top:15px;padding:12px;background:#fff3cd;border-radius:8px;font-size:0.85rem;">
-      <span data-i18n="checkout.privacyNote">🔒 隐私保护：中性包装发货，快递单无敏感信息</span>
+    <div style="margin-top:15px;">
+      <div style="padding:12px;background:#f0f4ff;border-radius:8px;font-size:0.85rem;border:1px solid #d4e2ff;">
+        <strong style="color:#003087;">PayPal</strong><br>
+        <span style="color:#666;">支持全球信用卡付款 · 国内可注册 · 提现到银行卡</span>
+      </div>
     </div>
-    <div class="payment-icons" style="margin-top:15px;">
+    <div class="payment-icons" style="margin-top:15px;font-size:2rem;">
       💳 💰 💚 💙
     </div>
   </div>
@@ -177,7 +179,7 @@ function renderOrderSummary() {
   const t = (key) => i18n?.t(key) ?? key;
 
   if (cart.length === 0) {
-    container.innerHTML = `<p style="color:#666;text-align:center;padding:20px 0;">${t("cart.empty")}</p>`;
+    container.innerHTML = '<p style="color:#666;text-align:center;padding:20px 0;">暂无商品</p>';
     if (subtotalEl) subtotalEl.textContent = "¥0.00";
     if (totalEl) totalEl.textContent = "¥0.00";
     if (btn) btn.disabled = true;
@@ -200,6 +202,18 @@ function renderOrderSummary() {
   if (totalEl) totalEl.textContent = `¥${subtotal.toFixed(2)}`;
 }
 
+// 切换支付方式时更新按钮文字
+document.querySelectorAll('input[name="payment"]').forEach(input => {
+  input.addEventListener("change", function() {
+    const btn = document.getElementById("checkoutBtn");
+    if (this.value === "paypal") {
+      btn.innerHTML = "💰 使用 PayPal 支付";
+    } else {
+      btn.innerHTML = "💳 使用 Stripe 支付";
+    }
+  });
+});
+
 async function handleCheckout() {
   const firstName = document.getElementById("firstName")?.value.trim();
   const lastName = document.getElementById("lastName")?.value.trim();
@@ -212,25 +226,50 @@ async function handleCheckout() {
   const t = (key, vars) => i18n?.t(key, vars) ?? key;
 
   if (!firstName || !lastName || !email || !phone || !address || !city || !zip) {
-    showToast(t("checkout.required", "⚠️ 请填写所有必填字段"));
+    showToast("⚠️ 请填写所有必填字段");
     return;
   }
 
   const cart = JSON.parse(localStorage.getItem("lustrevault_cart")) || [];
   if (cart.length === 0) {
-    showToast(t("cart.emptyCart"));
+    showToast("⚠️ 购物车为空");
     return;
   }
 
   const payment = document.querySelector('input[name="payment"]:checked');
-  const paymentMethod = payment ? payment.value : "stripe";
+  const paymentMethod = payment ? payment.value : "paypal";
 
   const btn = document.getElementById("checkoutBtn");
   btn.disabled = true;
-  btn.innerHTML = `<span>${t("checkout.processing")}</span>`;
+  btn.innerHTML = "⏳ 处理中...";
 
   try {
-    if (paymentMethod === "stripe") {
+    if (paymentMethod === "paypal") {
+      // 调用 PayPal API
+      const res = await fetch("/api/create-paypal-order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          items: cart,
+          customer: { email, name: `${firstName} ${lastName}` }
+        }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        // 保存订单信息到 sessionStorage，支付成功页可以使用
+        sessionStorage.setItem("pending_order", JSON.stringify({
+          name: `${firstName} ${lastName}`,
+          email,
+          method: "paypal"
+        }));
+        window.location.href = data.url;
+      } else {
+        showToast("⚠️ PayPal 服务异常，请稍后重试");
+        btn.disabled = false;
+        btn.innerHTML = "💰 使用 PayPal 支付";
+      }
+    } else {
+      // Stripe 支付
       const res = await fetch("/api/create-checkout-session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -243,52 +282,30 @@ async function handleCheckout() {
       if (data.url) {
         window.location.href = data.url;
       } else {
-        showToast(t("checkout.error"));
+        showToast("⚠️ 支付服务异常");
         btn.disabled = false;
-        btn.innerHTML = `<span>${t("checkout.payBtn")}</span>`;
+        btn.innerHTML = "💳 使用 Stripe 支付";
       }
-    } else {
-      showToast("🎉 " + t("success.title"));
-      localStorage.removeItem("lustrevault_cart");
-      cart.length = 0;
-      updateCartUI();
-      renderOrderSummary();
-      setTimeout(() => {
-        alert(t("success.demoOrder", { name: `${firstName} ${lastName}`, email }));
-        window.location.href = "../index.html";
-      }, 500);
     }
   } catch (err) {
-    showToast(t("checkout.error"));
+    showToast("⚠️ 网络错误，请重试");
     btn.disabled = false;
-    btn.innerHTML = `<span>${t("checkout.payBtn")}</span>`;
+    btn.innerHTML = paymentMethod === "paypal" ? "💰 使用 PayPal 支付" : "💳 使用 Stripe 支付";
   }
 }
 
 // 监听语言切换
 document.addEventListener("langchange", function() {
   renderOrderSummary();
-  // 重新应用 i18n 到表单标签等
   window.__i18n?.apply();
-  // 更新国家下拉
   const countrySelect = document.getElementById("country");
   if (countrySelect && window.__i18n) {
     for (let i = 0; i < countrySelect.options.length; i++) {
-      const key = `checkout.countries.${i}`;
-      countrySelect.options[i].textContent = window.__i18n.t(key);
+      countrySelect.options[i].textContent = window.__i18n.t(`checkout.countries.${i}`);
     }
   }
-  // 更新支付方式标签
-  document.querySelectorAll('input[name="payment"]').forEach(input => {
-    const span = input.nextElementSibling;
-    if (span) {
-      const key = span.getAttribute("data-i18n");
-      if (key) span.textContent = window.__i18n?.t(key) || span.textContent;
-    }
-  });
 });
 
-// 等待 i18n 加载后渲染
 const checkI18n = setInterval(() => {
   if (window.__i18n && Object.keys(window.__i18n._data).length > 0) {
     clearInterval(checkI18n);
