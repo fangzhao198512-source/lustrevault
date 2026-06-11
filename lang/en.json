@@ -9,7 +9,7 @@
   "hero": {
     "badge": "🔒 Discreet Shipping · Worldwide Delivery",
     "title": "Explore Your{span}Desires{/span}",
-    "subtitle": "Curated premium adult products from around the world, designed for your pleasure.",
+    "subtitle": "Curated premium adult products from around the world, designed for your pleasure.<br>Every item is carefully selected — from materials to design — for the best experience.",
     "cta": "Shop Now",
     "learnMore": "Learn More"
   },
@@ -218,13 +218,13 @@
     "total": "Total",
     "privacyNote": "🔒 Neutral packaging, no sensitive info on labels",
     "countries": [
-      "China (中国)",
-      "United States (美国)",
-      "Japan (日本)",
-      "South Korea (韩国)",
-      "United Kingdom (英国)",
-      "Australia (澳大利亚)",
-      "Canada (加拿大)",
+      "China",
+      "United States",
+      "Japan",
+      "South Korea",
+      "United Kingdom",
+      "Australia",
+      "Canada",
       "Other countries"
     ],
     "paymentMethods": {
@@ -251,7 +251,7 @@
     "shippingValue": "3-7 business days",
     "privacyNote": "🔒 Your privacy is fully protected",
     "continue": "Continue Shopping",
-    "demoOrder": "🎉 Order placed!\n\nThank you, {name}!\nWe will contact you via WhatsApp."
+    "demoOrder": "🎉 Order placed!\\n\\nThank you, {name}!\\nWe will contact you via WhatsApp."
   },
   "lang": {
     "zh": "中文",
