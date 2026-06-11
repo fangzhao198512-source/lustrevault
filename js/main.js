@@ -1,22 +1,14 @@
-/* ===== 产品数据 ===== */
+/* ===,== 产品数据 ===== */
 // 产品核心数据（价格、图标等不依赖语言的属性）
 const productBase = [
-  { name: "智能温控震动棒" },
-  { name: "超真实按摩棒 Pro" },
-  { name: "情侣远程互动跳蛋" },
-  { name: "奢华真皮眼罩套装" },
-  { name: "水溶性润滑液 200ml" },
-  { name: "G点专用震动棒" },
-  { name: "双头穿戴假阳具" },
-  { name: "羽毛挑逗套装" }
-  { id: 1, price: 268, originalPrice: 328, icon: "🔮", badgeType: "sale", rating: 4.8, reviews: 326 },
-  { id: 2, price: 189, originalPrice: 239, icon: "🌊", badgeType: "new", rating: 4.7, reviews: 218 },
-  { id: 3, price: 356, originalPrice: 456, icon: "💞", badgeType: "sale", rating: 4.9, reviews: 521 },
-  { id: 4, price: 128, originalPrice: 0, icon: "⛓️", badgeType: "new", rating: 4.5, reviews: 134 },
-  { id: 5, price: 49, originalPrice: 69, icon: "💧", badgeType: "sale", rating: 4.6, reviews: 892 },
-  { id: 6, price: 298, originalPrice: 378, icon: "🔮", badgeType: "sale", rating: 4.8, reviews: 409 },
-  { id: 7, price: 239, originalPrice: 299, icon: "🌊", badgeType: "sale", rating: 4.6, reviews: 187 },
-  { id: 8, price: 89, originalPrice: 119, icon: "🪶", badgeType: "new", rating: 4.4, reviews: 95 }
+  { id: 1, name: "智能温控震动棒", price: 268, originalPrice: 328, icon: "🔮", badgeType: "sale", rating: 4.8, reviews: 326, category: "vibrator" },
+  { id: 2, name: "超真实按摩棒 Pro", price: 189, originalPrice: 239, icon: "🌊", badgeType: "new", rating: 4.7, reviews: 218, category: "dildo" },
+  { id: 3, name: "情侣远程互动跳蛋", price: 356, originalPrice: 456, icon: "💞", badgeType: "sale", rating: 4.9, reviews: 521, category: "couple" },
+  { id: 4, name: "奢华真皮眼罩套装", price: 128, originalPrice: 0, icon: "⛓️", badgeType: "new", rating: 4.5, reviews: 134, category: "bdsm" },
+  { id: 5, name: "水溶性润滑液 200ml", price: 49, originalPrice: 69, icon: "💧", badgeType: "sale", rating: 4.6, reviews: 892, category: "lubricant" },
+  { id: 6, name: "G点专用震动棒", price: 298, originalPrice: 378, icon: "🔮", badgeType: "sale", rating: 4.8, reviews: 409, category: "vibrator" },
+  { id: 7, name: "双头穿戴假阳具", price: 239, originalPrice: 299, icon: "🌊", badgeType: "sale", rating: 4.6, reviews: 187, category: "dildo" },
+  { id: 8, name: "羽毛挑逗套装", price: 89, originalPrice: 119, icon: "🪶", badgeType: "new", rating: 4.4, reviews: 134, category: "bdsm" }
 ];
 
 /* ===== 渲染产品 ===== */
