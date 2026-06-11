@@ -1,6 +1,14 @@
 /* ===== 产品数据 ===== */
 // 产品核心数据（价格、图标等不依赖语言的属性）
 const productBase = [
+  { name: "智能温控震动棒" },
+  { name: "超真实按摩棒 Pro" },
+  { name: "情侣远程互动跳蛋" },
+  { name: "奢华真皮眼罩套装" },
+  { name: "水溶性润滑液 200ml" },
+  { name: "G点专用震动棒" },
+  { name: "双头穿戴假阳具" },
+  { name: "羽毛挑逗套装" }
   { id: 1, price: 268, originalPrice: 328, icon: "🔮", badgeType: "sale", rating: 4.8, reviews: 326 },
   { id: 2, price: 189, originalPrice: 239, icon: "🌊", badgeType: "new", rating: 4.7, reviews: 218 },
   { id: 3, price: 356, originalPrice: 456, icon: "💞", badgeType: "sale", rating: 4.9, reviews: 521 },
@@ -28,7 +36,7 @@ function renderProducts(filter) {
     const trans = transData[idx] || {};
     return {
       ...base,
-      name: trans.name || base.name,
+      name: trans.name || base.name || "",
       category: trans.category || transData.find(t => t.id === base.id)?.category || "",
       desc: trans.desc || "",
       specs: trans.specs || [],
@@ -106,7 +114,7 @@ function viewProduct(id) {
 
 // 监听语言切换，重新渲染产品
 document.addEventListener("langchange", function() {
-  renderProducts();
+  setTimeout(function(){ renderProducts(); }, 500);
 });
 
 // 初始化
